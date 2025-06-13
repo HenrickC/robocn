@@ -2,6 +2,25 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import math
+#Prompt:
+#Dado o modelo cinematico do robo, forneça um modelo de deslocamento usando euler, considerando uma trajetoria em 8 onde cada vola(circunferencia superior e inferior) tem 20 cm
+#de raio. Entendeu a trajetoria? o objetivo é calcular o progresso da trajetoria e apos quantasa voltas completas o erro do raio da trajetoria é 2 cm
+
+
+#Especificações do professor:
+#Considere um robo movel de 2 rodas, com seção circular e eixo posicionado no cenro do robô, ELe faz curva alternado a velocidade diferencial entre as duas rodas.
+#O raio da roda é de 0,1 cm e o comprimento do eixo que une as duas rodas é de 0,5cm
+#Considere que o robo se move a uma velocidade de 0,1m/s e que ele está fazendo uma trajetória repetida em 8, onde cada fvolta do 8 mede 20 cm de raio(ou seja,
+# o retangulo que sobresscreve o 8 tem 80 cm de altura por 40 cm de largura).
+#Voce precisa "plotar" em um grafico a trajetoria do robo, mas a única forma de fazer isso é calculando o deslocamento a partir do modelo do robô(pois ele nao tem GPS preciso)
+#Essa forma de medir o deslcamento do robo a partir das voltas dada por cada roda é chamada de odometria
+#Considere o metodo de Euler para o cálculo do deslocamento incremental medido a cada 1 milisegundo. Calcule quantas voltas serão da das até que o raio do 8 tenha erro de 2 cm
+#(sobre de 20 para 22 cm), nos seguintes casos:
+#1) Variáveis declaradas como float32(precisão simples) e o seno alculado com 16 termos da série de taylor.
+#2) mesmo anterior, mas com variáveis declaradas como float64(dupla precisão)
+#3) Agora, mantenha a declaração das variáveis em float64, mas ao inves de usar a sére de taylor, use a biblioteca padrão do python para o calculo do seno e cosseno.
+#Plote o resultado sobreposto ao 8(trajetória ideal)
+#Use o chatGPT para conseguir o modelo cinemático do robo e do deslocamento usando Euler
 
 # Parâmetros do robô
 r = 2.0  # raio da roda (cm)
